@@ -1,0 +1,10 @@
+{
+  "name": "js-yaml",
+  "version": "4.1.0",
+  "license": "MIT",
+  "entry": "vendor/js-yaml/js-yaml.min.js (classic script, global jsyaml)",
+  "sources": {
+    "js-yaml.min.js": "https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js",
+    "LICENSE": "https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/LICENSE"
+  }
+}

@@ -1,0 +1,12 @@
+# Two fictional Kubernetes-style documents
+apiVersion: v1
+kind: Service
+metadata:
+  name: inkwell-web
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inkwell-web
+spec:
+  replicas: 2

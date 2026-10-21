@@ -1,0 +1,3 @@
+server:
+  host: example.test
+	port: 8080

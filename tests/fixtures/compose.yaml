@@ -1,0 +1,29 @@
+# Fictional Docker Compose file for a made-up blog service
+name: inkwell-blog
+services:
+  web:
+    image: inkwell/web:2.4.1
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment: &common_env
+      TZ: UTC
+      LOG_LEVEL: info
+      DATABASE_HOST: db
+    depends_on:
+      - db
+  db:
+    image: postgres:16-alpine
+    environment:
+      <<: *common_env
+      POSTGRES_DB: inkwell
+      POSTGRES_USER: blog_app
+      POSTGRES_PASSWORD: change-me-example
+    volumes:
+      - blog-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "blog_app"]
+      interval: 10s
+      retries: 5
+volumes:
+  blog-data: {}

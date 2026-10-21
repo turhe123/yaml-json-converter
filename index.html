@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO:START — the builder rewrites title / description / keywords for search (see CLAUDE.md) -->
+  <title>YAML to JSON Converter &amp; YAML Validator – Free, Private</title>
+  <meta name="description" content="Convert YAML to JSON and JSON to YAML in your browser. Validate Kubernetes, Compose or Actions files with exact error lines. Nothing is uploaded.">
+  <meta name="keywords" content="yaml to json, json to yaml, yaml validator, yaml lint online, yaml formatter, convert yaml to json online, kubernetes yaml validator, docker compose yaml">
+  <!-- SEO:END -->
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e0f14" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://turhe123.github.io/yaml-json-converter/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="YAML and JSON Converter – Free, Private, In Your Browser">
+  <meta property="og:description" content="Validate YAML and convert it to JSON and back in your browser with exact error lines. Free and open source, nothing is uploaded, works offline.">
+  <meta property="og:url" content="https://turhe123.github.io/yaml-json-converter/">
+  <meta property="og:image" content="https://turhe123.github.io/yaml-json-converter/docs/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="YAML and JSON Converter">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="YAML and JSON Converter – Free, Private, In Your Browser">
+  <meta name="twitter:description" content="Validate YAML and convert it to JSON and back in your browser with exact error lines. Free and open source, nothing is uploaded, works offline.">
+  <meta name="twitter:image" content="https://turhe123.github.io/yaml-json-converter/docs/og.png">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "YAML and JSON Converter",
+    "alternateName": "YAML and JSON Converter – Free, Private, In Your Browser",
+    "description": "Validate YAML and convert it to JSON and back in your browser with exact error lines. Free and open source, nothing is uploaded, works offline.",
+    "url": "https://turhe123.github.io/yaml-json-converter/",
+    "image": "https://turhe123.github.io/yaml-json-converter/docs/og.png",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript. Works offline after the first visit.",
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "license": "https://opensource.org/licenses/MIT",
+    "softwareVersion": "1.0.0",
+    "author": { "@type": "Person", "name": "Or Davidai Bachar", "url": "https://github.com/turhe123" },
+    "sameAs": ["https://github.com/turhe123/yaml-json-converter"]
+  }
+  </script>
+  <script src="vendor/js-yaml/js-yaml.min.js" defer></script>
+  <!-- Page views are counted with GoatCounter: no cookies, no personal data, open source. -->
+  <script data-goatcounter="https://turhe123.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#tool">Skip to the tool</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="./" aria-label="YAML and JSON Converter home">
+        <img class="brand__icon" src="icon.svg" alt="" width="28" height="28">
+        <span class="brand__name">YAML and JSON Converter</span>
+      </a>
+      <nav class="site-nav" aria-label="Page">
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/turhe123/yaml-json-converter" rel="noopener">GitHub</a>
+        <a href="https://turhe123.github.io/web-tools/" rel="noopener" class="site-nav__more">More tools</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container">
+      <!-- HERO:START — the builder may refine the headline and promise; keep the trust badges -->
+      <h1 class="hero__title">YAML and JSON Converter</h1>
+      <p class="hero__lead">Validate YAML and convert it to JSON and back in your browser with exact error lines.</p>
+      <!-- HERO:END -->
+      <ul class="badges" aria-label="Why this tool is safe to use">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Runs in your browser, files never leave your device</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 16 0 8 8 0 0 0-16 0z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Free, open source, no account, no ads</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 9.5 17 19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Works offline after the first visit</li>
+      </ul>
+    </section>
+
+    <section class="container" id="tool" aria-labelledby="tool-title">
+      <div class="tool-card">
+        <!-- TOOL:START — the builder replaces everything between these markers with the real tool UI -->
+        <h2 id="tool-title" class="visually-hidden">YAML and JSON Converter</h2>
+        <div class="yj-bar">
+          <div class="yj-seg" role="radiogroup" aria-label="Conversion direction">
+            <input type="radio" name="direction" id="dir-y2j" value="y2j" checked>
+            <label for="dir-y2j">YAML → JSON</label>
+            <input type="radio" name="direction" id="dir-j2y" value="j2y">
+            <label for="dir-j2y">JSON → YAML</label>
+          </div>
+          <div class="yj-bar__actions">
+            <button class="btn btn--small" id="swap" type="button" title="Move the output into the input and flip the direction">⇄ Swap</button>
+            <button class="btn btn--small btn--primary" id="convert" type="button" title="Convert now (Ctrl or ⌘ + Enter)">Convert</button>
+          </div>
+          <details class="yj-menu" id="options-menu">
+            <summary class="btn btn--small">Options</summary>
+            <div class="yj-menu__panel options" id="options">
+              <div class="field">
+                <label for="opt-indent">Indent</label>
+                <select id="opt-indent">
+                  <option value="2" selected>2 spaces</option>
+                  <option value="4">4 spaces</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="opt-schema">YAML schema</label>
+                <select id="opt-schema" aria-describedby="opt-schema-hint">
+                  <option value="core" selected>YAML 1.2 core</option>
+                  <option value="yaml11">YAML 1.1 (yes/no/on/off = booleans)</option>
+                </select>
+                <span class="field__hint" id="opt-schema-hint">How plain yes, no, on and off are read.</span>
+              </div>
+              <div class="field">
+                <label for="opt-style">YAML output style</label>
+                <select id="opt-style">
+                  <option value="block" selected>Block (indented)</option>
+                  <option value="flow">Flow ({ } and [ ])</option>
+                </select>
+              </div>
+              <div class="field yj-checks">
+                <span class="field__label">Also</span>
+                <label class="check"><input type="checkbox" id="opt-sort"> Sort keys A–Z</label>
+                <label class="check"><input type="checkbox" id="opt-fold"> Fold YAML lines at 80 chars</label>
+                <label class="check"><input type="checkbox" id="opt-safe" checked> Safe mode: refuse custom tags</label>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div class="yj-panes">
+          <div class="yj-pane" id="input-pane">
+            <div class="yj-pane__head">
+              <label class="yj-pane__title" for="input" id="input-label">YAML input</label>
+              <span class="yj-badge" id="badge" data-state="empty">Empty</span>
+            </div>
+            <textarea id="input" class="mono yj-text" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" wrap="off" placeholder="Paste YAML here, or drop a .yaml, .yml or .json file" aria-describedby="shortcut-hint"></textarea>
+            <div class="dropzone dropzone--compact yj-drop" id="dropzone" tabindex="0" role="button" aria-label="Open a .yaml, .yml or .json file">
+              <label class="visually-hidden" for="file-input">Open a YAML or JSON file</label>
+              <input class="dropzone__input" id="file-input" type="file" accept=".yaml,.yml,.json,application/json,application/yaml,text/yaml,application/x-yaml" tabindex="-1">
+              <p class="dropzone__title">Drop a file or <span class="link">open .yaml, .yml or .json</span></p>
+            </div>
+          </div>
+          <div class="yj-pane">
+            <div class="yj-pane__head">
+              <label class="yj-pane__title" for="output" id="output-label">JSON output</label>
+              <div class="yj-pane__tools">
+                <button class="btn btn--small" id="copy" type="button">Copy</button>
+                <button class="btn btn--small" id="download" type="button" title="Download (Ctrl or ⌘ + S)">Download converted.json</button>
+              </div>
+            </div>
+            <textarea id="output" class="mono yj-text" readonly spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" wrap="off" placeholder="The converted result appears here as you type."></textarea>
+          </div>
+        </div>
+        <p class="yj-hint" id="shortcut-hint">Converts as you type. <kbd class="kbd">Ctrl</kbd>/<kbd class="kbd">⌘</kbd> + <kbd class="kbd">Enter</kbd> converts now, <kbd class="kbd">Ctrl</kbd>/<kbd class="kbd">⌘</kbd> + <kbd class="kbd">S</kbd> downloads.</p>
+        <div class="progress yj-progress" id="progress" hidden><span></span></div>
+        <div class="results" id="results" aria-live="polite"></div>
+        <!-- TOOL:END -->
+      </div>
+    </section>
+
+    <section class="container section" id="how" aria-labelledby="how-title">
+      <h2 id="how-title" class="section__title">How it works</h2>
+      <!-- HOW:START — three honest steps for this tool -->
+      <ol class="steps">
+        <li><strong>Paste or drop your file.</strong> Pick YAML → JSON or JSON → YAML, then paste text or drop a .yaml, .yml or .json file. It is read on your device only.</li>
+        <li><strong>Read the result as you type.</strong> The output updates after a short pause. If something is wrong you get the line, column, a caret under the problem and a plain-language hint.</li>
+        <li><strong>Copy or download.</strong> Choose indent, key sorting and YAML style in Options, then copy the result or save it as converted.json or converted.yaml.</li>
+      </ol>
+      <!-- HOW:END -->
+    </section>
+
+    <section class="container section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="section__title">Questions, answered</h2>
+      <!-- FAQ:START — 4 to 6 questions; keep the privacy, offline and AI answers -->
+      <details class="faq" open>
+        <summary>Is my YAML or JSON uploaded anywhere?</summary>
+        <p>No. YAML and JSON Converter runs entirely in your browser. The text you paste or the file you drop is parsed in memory on your device and never sent to a server, so configs with hostnames or secrets stay private. You can disconnect from the internet and it keeps working.</p>
+      </details>
+      <details class="faq">
+        <summary>Why does it say a tab or a missing space is an error?</summary>
+        <p>YAML forbids tab characters for indentation and needs a space after the colon in <code>key: value</code>. The error box shows the exact line and column with a caret, and the Go to line button puts your cursor right there. Duplicate keys are reported too.</p>
+      </details>
+      <details class="faq">
+        <summary>What happens to multiple documents, anchors and dates?</summary>
+        <p>Documents separated by <code>---</code> become one JSON array. Anchors and aliases (including <code>&lt;&lt;</code> merge keys) are expanded into copies, with a note. Dates become ISO strings, values with leading zeros such as 007 stay strings, and integers too large for JSON numbers are kept as strings with a warning.</p>
+      </details>
+      <details class="faq">
+        <summary>Is "yes" a boolean or a string?</summary>
+        <p>In YAML 1.2, which this tool uses by default, yes, no, on and off are plain strings. Older YAML 1.1 parsers treat them as booleans. Switch the schema in Options if you need the old behaviour; a hint appears when your file contains such values.</p>
+      </details>
+      <details class="faq">
+        <summary>Is it really free, and does it work offline?</summary>
+        <p>Yes. It is open source under the MIT license, with no account, no limits and no ads. After your first visit the page is cached by a service worker, so it loads without a connection, and you can install it from your browser's menu as an app.</p>
+      </details>
+      <details class="faq">
+        <summary>Was this written by AI?</summary>
+        <p>Yes. YAML and JSON Converter was generated by Claude Code from a written specification inside an automated pipeline, with a test suite that runs in a real browser. The full source is on GitHub, so you can read every line before you trust it with your files.</p>
+      </details>
+      <!-- FAQ:END -->
+    </section>
+
+    <section class="container section" id="support">
+      <div class="support-card">
+        <h2 class="section__title">Built by one person, given away for free</h2>
+        <p>YAML and JSON Converter is a free alternative to paid tools like Online YAML parsers and YAML to JSON sites. If it earns a place in your bookmarks, a coffee keeps the updates coming.</p>
+        <a class="btn btn--kofi" href="https://ko-fi.com/leodavidai" rel="noopener">☕ Support Or on Ko-fi</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="site-footer__links">
+        <a href="https://github.com/turhe123/yaml-json-converter" rel="noopener">Source on GitHub</a> ·
+        <a href="https://github.com/turhe123/yaml-json-converter/issues" rel="noopener">Report a bug</a> ·
+        <a href="https://turhe123.github.io/web-tools/" rel="noopener">More free web tools</a> ·
+        <a href="https://ko-fi.com/leodavidai" rel="noopener">Ko-fi</a>
+      </p>
+      <p class="site-footer__disclosure"><strong>Built with AI.</strong> YAML and JSON Converter was written by Claude Code inside an automated pipeline from a plain-English spec, as a clean-room implementation: no code or assets from any commercial product. It runs entirely in your browser, makes no network requests except an anonymous, cookieless page-view count, and has had less human review than hand-written software. Bug reports and pull requests are welcome.</p>
+      <p class="site-footer__copy">© 2026 Or Davidai Bachar · MIT License · <span id="sw-status" class="sw-status" aria-live="polite"></span></p>
+    </div>
+  </footer>
+
+  <script type="module" src="site.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
